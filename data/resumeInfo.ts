@@ -41,7 +41,7 @@ const experience = {
     {
       company: "CodeSpace Academy",
       position: "Code Coach",
-      duration: "June 2024 - February",
+      duration: "June 2024 - February 2025",
     },
     {
       company: "Sun International",
