@@ -41,14 +41,14 @@ const Work = () => {
                             <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                                 {project.num}
                             </div>
-                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                            <h2 className="text-[42px] font-bold leading-none text-foreground group-hover:text-[#00ff99] transition-all duration-500 capitalize">
                                 {project.category} project
                             </h2>
-                            <p className="text-white/60">{project.description}</p>
+                            <p className="text-foreground/60">{project.description}</p>
                             <ul className="flex flex-wrap gap-4">
                                 {project.stack.map((item, index) => {
                                     return (
-                                        <li key={index} className="text-xl text-accent">
+                                        <li key={index} className="text-xl text-[#00ff99]">
                                             {item.name}
                                             {index !== project.stack.length - 1 && ","}
                                         </li>
@@ -61,8 +61,8 @@ const Work = () => {
                                 <Link href={project.live}>
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
-                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex flex-col justify-center items-center group">
-                                                <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-foreground/5 flex flex-col justify-center items-center group">
+                                                <BsArrowUpRight className="text-foreground text-3xl group-hover:text-[#00ff99]" />
                                                 <TooltipContent>
                                                     <p>Live project</p>
                                                 </TooltipContent>
@@ -73,8 +73,8 @@ const Work = () => {
                                 <Link href={project.github}>
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
-                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex flex-col justify-center items-center group">
-                                                <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-foreground/5 flex flex-col justify-center items-center group">
+                                                <BsGithub className="text-foreground text-3xl group-hover:text-[#00ff99]" />
                                                 <TooltipContent>
                                                     <p>Github repo</p>
                                                 </TooltipContent>
@@ -96,7 +96,7 @@ const Work = () => {
                                 return (
                                     <SwiperSlide key={index} className="w-full">
                                         <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
-                                            <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                                            <div className="absolute top-0 bottom-0 w-full h-full bg-background/10 z-10"></div>
                                             <div className="relative w-full h-full">
                                                 <Image
                                                     src={item.image}
@@ -111,7 +111,7 @@ const Work = () => {
                             })}
                             <WorkSliderButtons
                                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max "
-                                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                                btnStyles="bg-[#00ff99] hover:bg-[#00ff99]/50 text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
                                 iconStyles=""
                             />
                         </Swiper>

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Project, freelanceProjects } from "@/data/projects";
+import { freelanceProjects } from "@/data/projects";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import {
     Card,
@@ -45,7 +45,7 @@ const Projects = () => {
             <div className="text-center">
                 <h2 className="text-4xl font-bold tracking-tight">Projects</h2>
                 <p className="text-muted-foreground max-w-2xl mx-auto mt-2">
-                    A showcase of real-world applications I've built using modern web technologies.
+                    A showcase of real-world applications I&apos;ve built using modern web technologies.
                 </p>
             </div>
 
@@ -67,9 +67,11 @@ const Projects = () => {
                             </CardHeader>
 
                             <CardContent className="flex-1 flex flex-col">
-                                <img
+                                <Image
                                     src={project.image}
                                     alt={project.title}
+                                    width={100}
+                                    height={180}
                                     className="rounded-lg object-cover w-full h-[180px] mb-4"
                                 />
                                 <CardDescription className="text-sm text-muted-foreground truncate">

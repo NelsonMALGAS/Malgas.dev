@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/Header";
 import StairTransition from "@/components/StairTransition";
 import PageTransition from "@/components/PageTransition";
-import { Separator } from "@/components/ui/separator";
+import { Toaster } from "sonner";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrainsMono",
@@ -39,6 +39,7 @@ export default function RootLayout({
           <PageTransition>
             <main className="container mx-auto p-8">{children}</main>
           </PageTransition>
+          <Toaster position="top-center" />
         </ThemeProvider>
       </body>
     </html>
